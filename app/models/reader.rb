@@ -17,8 +17,10 @@ class Reader < ActiveRecord::Base
 
   def sline1
     s = string_beetewn_marker
+    if s !~ /AERODROME HOURS OF OPS\/SERVICE/
 
-    if  s[0][2] == 'MON-WED' && s[0][4] == ' THU' && s[0][8] == 'FRI' && s[0][13] == 'SAT' && s[0][18] == ' SUN'
+
+    elsif  s[0][2] == 'MON-WED' && s[0][4] == ' THU' && s[0][8] == 'FRI' && s[0][13] == 'SAT' && s[0][18] == ' SUN'
       a = "#{s[0][3]}", b = "#{s[0][3]}", c =  "#{s[0][3]}", d =  " #{s[0][6]}", d =  " #{s[0][10]}", d =  " #{s[0][15]} #{s[0][17]}",d =  " #{s[0][19]}"
     elsif s[1][2] == 'MON' && s[1][4] == ' TUE-THU' && s[1][8] == 'FRI' && s[1][13] == 'SAT' && s[1][18] == ' SUN'
       a = "#{s[1][3]}", b = "#{s[1][6]}", c =  "#{s[1][6]}", d =  " #{s[1][6]}", d =  " #{s[1][10]}", d =  " #{s[1][15]} #{s[1][17]}",d =  " #{s[1][19]}"

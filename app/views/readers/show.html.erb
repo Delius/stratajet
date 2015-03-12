@@ -1,10 +1,17 @@
 <p id="notice"><%= notice %></p>
 <p>
+  <strong>This are the records we are looking for  </strong>
+<ol>
+  <% @reader.string_beetewn_marker.each do |t| %>
+      <li><%= t %></li>
+  <% end %>
+</ol>
+</p>
 
-
+<p>
 <div class="center">
-  <strong>line</strong>
-  This is a single record table with the first record selected ( need to make conditions for other records formats)
+  <strong>line 1</strong>
+  <% if @reader.sline1 %>
   <table>
     <thead>
 
@@ -17,44 +24,173 @@
     <th>Sun</th>
 
     </thead>
-    <% @reader.sline2.each do |p| %>
+    <% @reader.sline1.each do |p| %>
         <td> <%= p %></td>
     <% end %>
-  </table>
-<table>
-  This is a table with searched for records out of the whole file. Need to exctract all line elements end select ones we are interested in
-  <thead>
-
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
-  </thead>
-  <tbody>
-
-  <% @reader.sline.each do |s| %>
-
-      <td><%= s %></td>
   <% end %>
+  </table>
+  <% if @reader.sline2 %>
+      <strong>line 2</strong>
+      <table>
 
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline2.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
   </tbody>
-</table>
+  </table>
 
+  <% if @reader.sline3 %>
+
+      <table>
+        <strong>line 3</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline3.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+
+  <% if @reader.sline4 %>
+      <table>
+        <strong>line 4</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline4.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  <% if @reader.sline5 %>
+      <table>
+        <strong>line 5</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline5.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  </table>
+  <% if @reader.sline6 %>
+      <table>
+        <strong>line 6</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline6.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  <% if @reader.sline7 %>
+      <table>
+        <strong>line 7</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline7.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  <% if @reader.sline8 %>
+      <table>
+        <strong>line 8</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline8.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
 </div>
 </p>
-<p>
-  <strong>This are the record we are looking for</strong>
-<ol><% @reader.string_beetewn_marker.each do |t| %>
 
-
-            <li><%= t %></li>
-
-        <% end %> </ol>
-</p>
 
 
 <%= link_to 'Edit', edit_reader_path(@reader) %> |

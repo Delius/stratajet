@@ -1,5 +1,8 @@
 <h1>New Reader</h1>
-Copy and paste the data in the notam_data.txt file and get the output in the same format as shown in the exercise.
+<p>Copy and paste the data in the notam_data.txt file and get the output in the same format as shown in the exercise. Other Data Sets will not work at this stage</p>
+<%= link_to 'Data Set', readers_path %>
+<p><%= link_to 'Result', reader_path(1) %></p>
+<p>Or try yourself</p>
 <%= render 'form' %>
 
 <%= link_to 'Back', readers_path %>

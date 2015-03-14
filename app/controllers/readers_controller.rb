@@ -10,6 +10,8 @@ class ReadersController < ApplicationController
   # GET /readers/1
   # GET /readers/1.json
   def show
+
+
   end
 
   # GET /readers/new
@@ -61,6 +63,9 @@ class ReadersController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reader
@@ -69,6 +74,6 @@ class ReadersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reader_params
-      params.require(:reader).permit(:textinput)
+      params.require(:reader).permit(:textinput, :objects)
     end
 end

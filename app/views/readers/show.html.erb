@@ -1,42 +1,14 @@
 <p id="notice"><%= notice %></p>
-
-
-<p>
-  <strong>This are the records we are looking for  </strong>
-<ol>
-  <% @reader.string_beetewn_marker.each do |t| %>
-      <li><%= t %></li>
-  <% end %>
-</ol>
-</p>
-
+<% @reader.shows.each do |s|%>
+    <td> <%= s %><br>
+<%end %>
 <p>
 <div class="center">
   <strong>line 1</strong>
-  <% if @reader.sline1 %>
-  <table>
-    <thead>
 
-    <th>Mon</th>
-    <th>Tue</th>
-    <th>Wed</th>
-    <th>Thu</th>
-    <th>Fri</th>
-    <th>Sat</th>
-    <th>Sun</th>
-
-    </thead>
-    <% @reader.sline1.each do |p| %>
-        <td> <%= p %></td>
-    <% end %>
-  <% end %>
-  </table>
-  <% if @reader.sline2 %>
-      <strong>line 2</strong>
       <table>
 
-        <thead>
-
+<tr>
         <th>Mon</th>
         <th>Tue</th>
         <th>Wed</th>
@@ -44,156 +16,15 @@
         <th>Fri</th>
         <th>Sat</th>
         <th>Sun</th>
-        </thead>
-        <tbody>
+</tr>
+<tr>
 
-        <% @reader.sline2.each do |s| %>
 
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
-  </table>
+            <%= render partial: "line" %>
 
-  <% if @reader.sline3 %>
+</tr>
 
-      <table>
-        <strong>line 3</strong>
-        <thead>
+</td>
 
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-        </thead>
-        <tbody>
-
-        <% @reader.sline3.each do |s| %>
-
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
-  </table>
-
-  <% if @reader.sline4 %>
-      <table>
-        <strong>line 4</strong>
-        <thead>
-
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-        </thead>
-        <tbody>
-
-        <% @reader.sline4.each do |s| %>
-
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
-  </table>
-  <% if @reader.sline5 %>
-      <table>
-        <strong>line 5</strong>
-        <thead>
-
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-        </thead>
-        <tbody>
-
-        <% @reader.sline5.each do |s| %>
-
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
-  </table>
-  </table>
-  <% if @reader.sline6 %>
-      <table>
-        <strong>line 6</strong>
-        <thead>
-
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-        </thead>
-        <tbody>
-
-        <% @reader.sline6.each do |s| %>
-
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
-  </table>
-  <% if @reader.sline7 %>
-      <table>
-        <strong>line 7</strong>
-        <thead>
-
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-        </thead>
-        <tbody>
-
-        <% @reader.sline7.each do |s| %>
-
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
-  </table>
-  <% if @reader.sline8 %>
-      <table>
-        <strong>line 8</strong>
-        <thead>
-
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-        </thead>
-        <tbody>
-
-        <% @reader.sline8.each do |s| %>
-
-            <td><%= s %></td>
-        <% end %>
-  <% end %>
-  </tbody>
   </table>
 </div>
-</p>
-
-
-
-<%= link_to 'Edit', edit_reader_path(@reader) %> |
-<%= link_to 'Back', readers_path %>

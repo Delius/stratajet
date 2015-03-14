@@ -204,3 +204,196 @@ class Reader < ActiveRecord::Base
     textinput.scan(/(AERODROME HOURS OF OPS\/SERVICE)(\r?\n?\s?:?)(\w+\-?\w+)(\s\d{1,4}-\d{1,4})(\s\w+\-?\w+)(\r?\n?\s?:?)(\d{1,4}-\d{1,4})(\r?\n?\s?:?)(\w+\-?\w+)(\r?\n?\s?:?)(\d{1,4}-\d{1,4})(\sF?R?I?)(\s?\d?\d?\d?\d?-?\d?\d?\d?\d?,?\s?\d?\d?\d?\d?-?\d?\d?\d?\d?)(\D\D\D\r?\n?)(\r?\n?\s?:?)(\w+\-?\w+)(\r?\n?\s?:?,?\s?)(\d?\d?\d?\d?-?\d?\d?\d?\d?)(\s?\D?\D?\D?)(\s?\D?\D?\D?\D?\D?\D?\d?\d?\d?\d?-?\d?\d?\d?\d?)([^.*?]*?)(CREATED)/)
   end
 end
+
+
+<p>
+  <strong>This are the records we are looking for  </strong>
+<ol>
+  <% @reader.string_beetewn_marker.each do |t| %>
+      <li><%= t %></li>
+  <% end %>
+</ol>
+</p>
+
+<p>
+<div class="center">
+  <strong>line 1</strong>
+  <% if @reader.sline1 %>
+  <table>
+    <thead>
+
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+
+    </thead>
+    <% @reader.sline1.each do |p| %>
+        <td> <%= p %></td>
+    <% end %>
+  <% end %>
+  </table>
+  <% if @reader.sline2 %>
+      <strong>line 2</strong>
+      <table>
+
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline2.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+
+  <% if @reader.sline3 %>
+
+      <table>
+        <strong>line 3</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline3.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+
+  <% if @reader.sline4 %>
+      <table>
+        <strong>line 4</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline4.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  <% if @reader.sline5 %>
+      <table>
+        <strong>line 5</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline5.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  </table>
+  <% if @reader.sline6 %>
+      <table>
+        <strong>line 6</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline6.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  <% if @reader.sline7 %>
+      <table>
+        <strong>line 7</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline7.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+  <% if @reader.sline8 %>
+      <table>
+        <strong>line 8</strong>
+        <thead>
+
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </thead>
+        <tbody>
+
+        <% @reader.sline8.each do |s| %>
+
+            <td><%= s %></td>
+        <% end %>
+  <% end %>
+  </tbody>
+  </table>
+</div>
+</p>
